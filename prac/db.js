@@ -15,4 +15,5 @@ const usermodel=mongoose.model('users', user);
 const todomodel=mongoose.model('todos', todo);
 module.exports={
     usermodel:usermodel
+    todomodel:todomodel
 }
