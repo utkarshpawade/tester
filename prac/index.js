@@ -6,8 +6,8 @@ const {usermodel, todomodel}=require("./db");
 
 app.use(express.json());
 const users=[];
-fucntion gentoken(){
-
+function gentoken(){
+    
 }
 app.post("/signup", function(req, res){
     const username=req.body.username;
