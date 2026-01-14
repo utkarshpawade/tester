@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
+const Bulbcontext=createContext();
 const App=()=>{
     return <div>
+      <Bulbcontext>
+        <Lightbulb/>
+      </Bulbcontext>
       <Lightbulb/>
     </div>
 }
