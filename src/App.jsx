@@ -13,7 +13,7 @@ const Lightbulb=()=>{
 }
 const Bulbstate=({Bulbon})=>{
   return <div>
-    {Bulbon ? "bulb chalu": "bulbband"}
+    {Bulbon ? <img src='https://www.w3schools.com/js/pic_bulboff.gif'></img>: <img src="https://www.w3schools.com/js/pic_bulbon.gif"></img>}
   </div>
 }
 const Togglebulbstate=({Bulbon,  Setbulb})=>{
