@@ -1,15 +1,26 @@
 import { useState, createContext, useContext } from "react";
 const Bulbcontext=createContext();
 
-const App=()=>{
-    const[Bulbon, Setbulb]=useState(true);
-    return <div>
-      <Bulbcontext.Provider value={{
+const contextprovider=({children})=>{
+const[Bulbon, Setbulb]=useState(true);
+return 
+  <Bulbcontext.Provider value={
+  {
         Bulbon: Bulbon,
         Setbulb: Setbulb
-      }}>
+  }
+}>
+{children}
+</Bulbcontext.Provider>
+
+
+}
+const App=()=>{
+    
+    return <div>
+      <contextprovider>
         <Lightbulb/>
-      </Bulbcontext.Provider>
+      </contextprovider>
       
     </div>
 }
