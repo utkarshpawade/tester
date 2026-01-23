@@ -2,7 +2,12 @@ import { useEffect, useState} from "react";
 import { useFetch } from "./useFetch";
 
 const App=()=>{
-    const {finalData}=useFetch("https://jsonplaceholder.typicode.com/posts/2");
+    const {finalData, loading}=useFetch("https://jsonplaceholder.typicode.com/posts/2");
+    if(loading){
+        return <div>
+            loading...
+        </div>
+    }
     return (
     <div>
         {finalData.title}
